@@ -41,10 +41,10 @@ urlpatterns = [
     # 重置密码表单 POST 请求
     re_path(r'^modify_pwd/$', ModifyPwdView.as_view(), name="modify_pwd"),
 
-    #课程机构首页
-    re_path(r'^org_list/$', OrgView.as_view(), name="org_list"),
+    path("org/", include('organization.urls', namespace="org")),
     #配置上传文件的访问处理函数
     re_path(r'^media/(?P<path>.*)$',serve ,{"document_root":MEDIA_ROOT}),
+
 
 
 ]
