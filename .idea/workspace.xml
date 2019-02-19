@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da65c9f7-4380-49a0-a8ea-a38307852c07" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/organization/migrations/0005_teacher_image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/organization/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/organization/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/organization/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/organization/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/organization/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/organization/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/org-detail-course.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/org-detail-course.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/org-detail-desc.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/org-detail-desc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/org-detail-homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/org-detail-homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/org-detail-teachers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/org-detail-teachers.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/org_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/org_base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -97,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/org_base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="64" column="13" lean-forward="true" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+            <state relative-caret-position="228">
+              <caret line="63" column="60" lean-forward="true" selection-start-line="63" selection-start-column="60" selection-end-line="63" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -814,8 +805,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/org_base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="64" column="13" lean-forward="true" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+        <state relative-caret-position="228">
+          <caret line="63" column="60" lean-forward="true" selection-start-line="63" selection-start-column="60" selection-end-line="63" selection-end-column="60" />
         </state>
       </provider>
     </entry>
