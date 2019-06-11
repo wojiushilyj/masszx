@@ -28,7 +28,7 @@ urlpatterns = [
     path('xadmin/', xadmin.site.urls),
     path('', TemplateView.as_view(template_name="index.html"), name="index"),
     # 基于函数 的 View 映射 URL 方法
-    path('login/', LoginView.as_view(), name="login"),
+    re_path(r'^login/', LoginView.as_view(), name="login"),
     path('register/', RegisterView.as_view(), name="register"),
     # 验证码
     path('captcha/', include('captcha.urls')),
@@ -41,7 +41,10 @@ urlpatterns = [
     # 重置密码表单 POST 请求
     re_path(r'^modify_pwd/$', ModifyPwdView.as_view(), name="modify_pwd"),
 
+    #课程机构url配置
     path("org/", include('organization.urls', namespace="org")),
+    #课程相关url配置
+    re_path(r"^course/", include('courses.urls', namespace="course")),
     #配置上传文件的访问处理函数
     re_path(r'^media/(?P<path>.*)$',serve ,{"document_root":MEDIA_ROOT}),
 
