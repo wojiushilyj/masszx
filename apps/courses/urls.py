@@ -4,7 +4,7 @@ __date__ = '2019/2/26 0026 8:41'
 
 from django.urls import path, include,re_path
 
-from .views import CourseListView,CourseDetailView,CourseInfoView,CommentsView,AddComentsView
+from .views import CourseListView,CourseDetailView,CourseInfoView,CommentsView,AddComentsView,VideoPlayView
 app_name = "organization"
 
 
@@ -21,4 +21,6 @@ urlpatterns = [
 
     #添加课程评论
     re_path(r'^add_comment/$', AddComentsView.as_view(), name="add_comment"),
+
+    re_path(r'^video/(?P<video_id>\d+)/$', VideoPlayView.as_view(), name="video_play"),
 ]

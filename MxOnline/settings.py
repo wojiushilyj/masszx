@@ -27,7 +27,7 @@ SECRET_KEY = '^hn3^=+kc^z$ns@bm1)%qe%@9%e27s-86%th4jw4h7h@%3cxl$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.76','34420ae8.cpolar.io','www.fahrproton.cn','fahrproton.cn','d59f9584.ngrok.io','14dd71a2.cpolar.cn','127.0.0.1']
+ALLOWED_HOSTS = ['192.168.1.76','34420ae8.cpolar.io','www.fahrproton.cn','fahrproton.cn','d59f9584.ngrok.io','14dd71a2.cpolar.cn','127.0.0.1','61c438c1.cpolar.cn']
 
 
 # Application definition
