@@ -12,6 +12,7 @@ from .forms import LoginForm,RegisterForm, ForgetForm,ModifyPwdForm,UploadImageF
 from .forms import UserInfoForm
 from utils.email_send import send_register_email
 from utils.mixin_utils import LoginRequiredMixin
+from operation.models import UserCourse
 
 
 class CustomBackend(ModelBackend):
@@ -210,3 +211,13 @@ class UpdateEmailView(LoginRequiredMixin, View):
         else:
             return HttpResponse('{"email":"验证码出错"}', content_type="application/json")
 
+
+class MyCourseView(LoginRequiredMixin,View):
+    """
+    我的课程
+    """
+    def get(self,request):
+        user_courses = UserCourse.objects.filter(user=request.user)
+        return render(request,'usercenter-mycourse.html',{
+            "user_courses":user_courses
+        })
