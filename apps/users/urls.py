@@ -4,7 +4,7 @@ __date__ = '2019/6/20 0020 17:30'
 
 from django.urls import path, include,re_path
 from .views import UserinfoView,UploadImageView,UpdatePwdView,SendEmailCodeView,UpdateEmailView
-from .views import MyCourseView
+from .views import MyCourseView,MyFavOrgView,MyFavTeacherView,MyFavCourseView,MymessageView
 app_name = "users"
 
 urlpatterns = [
@@ -26,5 +26,16 @@ urlpatterns = [
     #我的课程
     re_path(r'^mycourse/$', MyCourseView.as_view(), name="mycourse"),
 
+    #我收藏的课程机构
+    re_path(r'^myfav/org/$', MyFavOrgView.as_view(), name="myfav_org"),
+
+    #我收藏的授课讲师
+    re_path(r'^myfav/teacher/$', MyFavTeacherView.as_view(), name="myfav_teacher"),
+
+    #我收藏的课程
+    re_path(r'^myfav/course/$', MyFavCourseView.as_view(), name="myfav_course"),
+
+    # 我的消息
+    re_path(r'^mymessage/$', MymessageView.as_view(), name="mymessage"),
 
 ]

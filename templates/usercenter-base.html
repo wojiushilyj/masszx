@@ -46,18 +46,17 @@
                                 </dl>
                                 <div class="btn">
 	                                <a class="personcenter fl" href="{% url 'users:user_info' %}">进入个人中心</a>
-	                                <a class="fr" href="/user/logout/">退出</a>
+	                                <a class="fr" href="{% url 'logout' %}">退出</a>
                                 </div>
                             </div>
                         </div>
-                        <a href="/user/message/">
+                        <a href="{% url 'users:mymessage' %}">
                             <div class="msg-num"> <span id="MsgNum">{{ request.user.unread_nums }}</span></div>
                         </a>
                         {% else %}
                             <a style="color:white" class="fr registerbtn" href="{% url 'register' %}">注册</a>
                             <a style="color:white" class="fr loginbtn" href="{% url 'login' %}">登录</a>
                         {% endif %}
-
 
 				</div>
 			</div>
@@ -92,9 +91,9 @@
         <ul>
             <li class="active2"><a href="{% url 'users:user_info' %}">个人资料</a></li>
             <li ><a href="{% url 'users:mycourse' %}">我的课程</a></li>
-            <li ><a href="usercenter-fav-course.html">我的收藏</a></li>
+            <li ><a href="{% url 'users:myfav_org' %}">我的收藏</a></li>
             <li >
-                <a href="usercenter-message.html" style="position: relative;">
+                <a href="{% url 'users:mymessage' %}" style="position: relative;">
                     我的消息
                 </a>
             </li>
@@ -333,11 +332,11 @@
         $.ajax({
                 cache: false,
                 type: "POST",
-                url: "/org/add_fav/",
+                url: "{% url 'org:add_fav' %}",
                 data: {
                     fav_type: 1,
                     fav_id: favid,
-                    csrfmiddlewaretoken: '799Y6iPeEDNSGvrTu3noBrO4MBLv6enY'
+                    csrfmiddlewaretoken: '{{ csrf_token }}'
                 },
                 async: true,
                 success: function(data) {
@@ -352,11 +351,11 @@
             $.ajax({
                     cache: false,
                     type: "POST",
-                    url: "/org/add_fav/",
+                    url: "{% url 'org:add_fav' %}",
                     data: {
                         fav_type: 3,
                         fav_id: favid,
-                        csrfmiddlewaretoken: '799Y6iPeEDNSGvrTu3noBrO4MBLv6enY'
+                        csrfmiddlewaretoken: '{{ csrf_token }}'
                     },
                     async: true,
                     success: function(data) {
@@ -372,11 +371,11 @@
             $.ajax({
                     cache: false,
                     type: "POST",
-                    url: "/org/add_fav/",
+                    url: "{% url 'org:add_fav' %}",
                     data: {
                         fav_type: 2,
                         fav_id: favid,
-                        csrfmiddlewaretoken: '799Y6iPeEDNSGvrTu3noBrO4MBLv6enY'
+                        csrfmiddlewaretoken: '{{ csrf_token }}'
                     },
                     async: true,
                     success: function(data) {
