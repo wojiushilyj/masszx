@@ -25,9 +25,9 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 SECRET_KEY = '^hn3^=+kc^z$ns@bm1)%qe%@9%e27s-86%th4jw4h7h@%3cxl$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['192.168.1.76','34420ae8.cpolar.io','www.fahrproton.cn','fahrproton.cn','d59f9584.ngrok.io','14dd71a2.cpolar.cn','127.0.0.1','61c438c1.cpolar.cn']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -139,7 +139,8 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
+    #这里注意
+    os.path.join(BASE_DIR, "static"),
 ]
 
 EMAIL_HOST = "smtp.sina.com"
@@ -152,4 +153,7 @@ EMAIL_FROM = "masszx@sina.com"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+
+# STATIC_ROOT = os.path.join(BASE_DIR, "static")
 

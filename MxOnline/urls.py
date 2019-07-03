@@ -20,13 +20,16 @@ import xadmin
 from django.views.static import serve
 
 from users.views import LogoutView,LoginView, RegisterView,ActiveUserView,ForgetPwdView,ResetView,ModifyPwdView
+from users.views import IndexView
 from organization.views import OrgView
 from MxOnline.settings import MEDIA_ROOT
+    # ,STATIC_ROOT
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('xadmin/', xadmin.site.urls),
-    path('', TemplateView.as_view(template_name="index.html"), name="index"),
+    # path('', IndexView.as_view(template_name="index.html"), name="index"),
+    path('', IndexView.as_view(), name="index"),
     # 基于函数 的 View 映射 URL 方法
     re_path(r'^login/', LoginView.as_view(), name="login"),
 
@@ -52,7 +55,14 @@ urlpatterns = [
     #配置上传文件的访问处理函数
     re_path(r'^media/(?P<path>.*)$',serve ,{"document_root":MEDIA_ROOT}),
 
+    #配置访问处理函数
+    # re_path(r'^static/(?P<path>.*)$',serve ,{"document_root":STATIC_ROOT}),
+
     # 课程相关url配置
     re_path(r"^users/", include('users.urls', namespace="users")),
 
 ]
+
+#全局404页面配置
+handler404='users.views.page_not_found'
+handler500='users.views.page_error'

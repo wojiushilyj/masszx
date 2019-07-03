@@ -93,7 +93,7 @@ a:active {
     display: block;
     height: 60px;
     width: 140px;
-    background: url(/static/img/common/logo.png?t=1) no-repeat center center;
+    background: url(/static/images/footlogo.png) no-repeat center center;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
